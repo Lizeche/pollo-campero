@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pollo Campero </title>
+</head>
+<body>
+    <header>
+        <right>
+        <img src="logo.png" height="180" width="200">
+        </right>
+  <button class="barras" id="boton">
+    <div class="boton_menu" id="icono"></div>
+  </button>
+  <nav class="desplegable" id="menu">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<script>
+  const boton = document.getElementById("boton");
+  const menu = document.getElementById("menu");
+  const icono = document.getElementById("icono");
+
+  boton.addEventListener("click", () => {
+    menu.classList.toggle("abrir_menu");
+    icono.classList.toggle("colocar_x");
+  });
+</script>
+            </body>
+            </html>
