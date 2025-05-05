@@ -1,0 +1,64 @@
+/* Fondo y fuente */
+body {
+  background-color: #EFF160;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Sección de sucursales */
+.sucursal {
+  margin-bottom: 40px;
+}
+
+.sucursal img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.sucursal h1 {
+  font-size: 1.8rem;
+  margin: 15px 0 10px 0;
+  color: #2E4172;
+}
+
+.sucursal p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+
+/* Línea divisoria */
+hr {
+  border: 1px solid #ccc;
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Botón */
+.boton-centro {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #2E4172;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1c2b4a;
+}

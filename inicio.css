@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+  background-color: #BDF9B7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+main {
+  padding: 20px;
+}
+
+
+.menu h1 {
+  font-size: 2.5rem;
+  color: #2E4172;
+  margin-bottom: 10px;
+}
+
+.menu h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.menu h3 {
+  font-size: 1.4rem;
+  color: #F04D3D;
+  margin-top: 30px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px 0 20px 0;
+}
+
+.menu ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  width: 80%;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+/* Botón */
+.boton-centro {
+  margin-top: 30px;
+}
+
+button {
+  background-color: #2E4172;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1c2b4a;
+}
