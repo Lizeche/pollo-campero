@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pollo Campero </title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="liz.css" />
+  <title>Pollo Campero</title>
 </head>
 <body>
-    <header>
-        <right>
-        <img src="logo.png" height="180" width="200">
-        </right>
-  <button class="barras" id="boton">
-    <div class="boton_menu" id="icono"></div>
-  </button>
-  <nav id="menu" class="desplegable">
-             <ul>
-        <li><a href="ace.html">Inicio</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="proyecto.html">Proyectos</a></li>
-        <li><a href="conctac.html">Contactanos</a></li>
-            </ul>
-            </nav>
-            </header>
-            <script src="main.js"></script>
-            </body>
-            </html>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="pollo.png" alt="Logo Pollo Campero" height="80" />
+      </div>
+      <div class="hamburguesa" id="hamburguesa">☰</div>
+      <nav class="nav" id="menu">
+        <ul>
+          <li><a href="ace.html">Inicio</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="proyecto.html">Proyectos</a></li>
+          <li><a href="conctac.html">Contactanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const hamburguesa = document.getElementById('hamburguesa');
+    const menu = document.getElementById('menu');
+
+    hamburguesa.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+      hamburguesa.textContent = menu.classList.contains('activo') ? '✖' : '☰';
+    });
+  </script>
+</body>
+</html>
