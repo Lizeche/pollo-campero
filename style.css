@@ -1,116 +1,99 @@
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Fondo del sitio */
 body {
-    background-image: url('fondo.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
+  background-image: url('fondo.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-
-/* computadora */
-.barras {
-    display: none;
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
 }
 
-.desplegable {
-  background-color: rgba(0, 0, 0, 0.7); 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
 }
 
-ul li {
-    padding: 10px;
-    list-style: none;
+/* Menú y enlaces */
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
 
-ul li a {
-    color:green;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.1rem;
+.nav ul li {
+  padding: 10px;
 }
 
-nav ul li:hover {
-    background: #F04D3D;
+.nav ul li a {
+  color: green;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
-/* tablet */
+.nav ul li:hover {
+  background: #F04D3D;
+}
+
+/* Botón hamburguesa */
+.hamburguesa {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive - Tablets y móviles */
 @media (max-width: 850px) {
-    .barras {
-        background-color: #2E4172;
-        display: block;
-    }
+  .hamburguesa {
+    display: block;
+  }
 
-    .desplegable {
-        background: none;
-        transform: translate(-100%);
-        transition: 0.5s;
-        font-size: 1.5rem;
-        width: 50%;
-    }
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    z-index: 100;
+  }
 
-    ul {
-        flex-direction: column;
-        height: 100vh;
-    }
+  .nav.activo {
+    display: flex;
+  }
 
-    a {
-        font-size: 1.5rem;
-        padding: 20px 0 20px 20px;
-        display: block;
-        text-align: left;
-    }
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .boton_menu {
-        background-image: url('hamburguesa-removebg-preview.png');
-        background-color: #2E4172;
-        background-repeat: no-repeat;
-        height: 30px;
-        width: 30px;
-        background-size: 30px 30px;
-        background-position: center;
-    }
-
-    button {
-        margin: 10px 10px 10px 20px;
-        border: none;
-    }
-
-    /* con esta clase cierro y abro el menú con toggle */
-    .abrir_menu {
-        background: rgba(30, 30, 30, 0.6);
-        backdrop-filter: blur(2px);
-        transform: translate(0%);
-        width: 50%;
-        transition: 0.5s;
-    }
-
-    /* con esta clase cambio las barras por una x */
-    .colocar_x {
-        background-image: url('x.png');
-        background-color: #2E4172;
-        background-repeat: no-repeat;
-        height: 30px;
-        width: 30px;
-        background-size: 30px 30px;
-        background-position: center;
-    }
-}
-
-/* móvil */
-@media (max-width: 500px) {
-    .desplegable {
-        width: 100%;
-        height: 100vh;
-        font-size: 1.6rem;
-    }
+  .nav ul li a {
+    font-size: 1.5rem;
+    color: white;
+    padding: 10px;
+    display: block;
+  }
 }
